@@ -16,7 +16,7 @@
 ## Install
 
 ```
-asdf plugin-add postgres https://github.com/iroddis/asdf-r.git
+asdf plugin-add R https://github.com/iroddis/asdf-R.git
 ```
 
 ## ASDF options
