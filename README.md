@@ -30,5 +30,5 @@ When installing R using `asdf install`, you can pass custom configure options wi
 
 ## Thanks
 
-Thanks to (asdf-postgres)[http://github.com/smashedtoatoms/asdf-postgres] for providing an awesome plugin
+Thanks to [asdf-postgres](http://github.com/smashedtoatoms/asdf-postgres) for providing an awesome plugin
 that was easy to modify for this language.
