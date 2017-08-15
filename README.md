@@ -28,3 +28,7 @@ When installing R using `asdf install`, you can pass custom configure options wi
 * `R_CONFIGURE_OPTIONS` - use only your configure options
 * `R_EXTRA_CONFIGURE_OPTIONS` - append these configure options along with ones that this plugin already uses
 
+## Thanks
+
+Thanks to (asdf-postgres)[http://github.com/smashedtoatoms/asdf-postgres] for providing an awesome plugin
+that was easy to modify for this language.
