@@ -1,0 +1,8 @@
+language: c
+script: asdf plugin-test R https://github.com/iroddis/asdf-R.git 'R --version'
+before_script:
+    - git clone https://github.com/iroddis/asdf-R.git asdf-R
+    - . asdf/asdf.sh
+os:
+  - linux
+  - osx
