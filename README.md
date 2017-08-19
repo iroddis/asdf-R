@@ -1,6 +1,6 @@
 # asdf-r
 
-[R](https://www.r-project.org/) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
+[R](https://www.r-project.org/) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager.
 
 ## Dependencies
 
@@ -10,8 +10,8 @@
     1. Hit the ok button and it will install.  If it already has it, then you are good.
   * Ubuntu
     1. ```sudo apt-get install linux-headers-$(uname -r) build-essential```
-1. On Ubuntu, you will need libreadline and libcurl
-  1. ```sudo apt-get install libreadline-dev libcurl3-dev```
+1. On Ubuntu, you will need some additional libraries
+  1. ```sudo apt-get install libreadline-dev libcurl3-dev gfortran```
 
 ## Install
 
