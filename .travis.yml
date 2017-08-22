@@ -1,8 +1,7 @@
 language: c
 script: asdf plugin-test R https://github.com/iroddis/asdf-R.git 'R --version'
 before_install:
-    - sudo apt-get -qq update
-    - sudo apt-get -y install build-essential libcurl3-dev libreadline-dev gfortran
+    - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get -qq update; sudo apt-get -y install build-essential libcurl3-dev libreadline-dev gfortran; else brew install gcc gfortran; fi
 before_script:
     - git clone https://github.com/asdf-vm/asdf.git
     - . asdf/asdf.sh
