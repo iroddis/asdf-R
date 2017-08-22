@@ -1,17 +1,15 @@
-# asdf-r
+# asdf-R
 
 [R](https://www.r-project.org/) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager.
 
 ## Dependencies
 
-1. You will need a compiler.
-  * Mac
-    1. ```gcc```
-    1. Hit the ok button and it will install.  If it already has it, then you are good.
-  * Ubuntu
-    1. ```sudo apt-get install linux-headers-$(uname -r) build-essential```
-1. On Ubuntu, you will need some additional libraries
-  1. ```sudo apt-get install libreadline-dev libcurl3-dev gfortran```
+* Mac
+    1. [Homebrew](https://brew.sh): used to install the remainder of the dependencies
+    1. ```brew install gcc xz```
+* Linux
+    * Ubuntu / Debian
+        1. ```sudo apt-get install build-essential libcurl3-dev libreadline-dev gfortran```
 
 ## Install
 
