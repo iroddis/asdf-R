@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 
-versions_list=(
-    3.4.1
-)
-
 versions=""
-
-for version in "${versions_list[@]}"
-do
-  versions="${versions} ${version}"
+for major_version in 2 3; do
+    versions="${versions} $(curl --silent https://mirrors.nics.utk.edu/cran/src/base/R-${major_version}/ | tr '<>' ',,' | awk -F, '/tar.gz/{ print $13 }' | sed -e 's/.tar.gz//g' -e 's/R-//')"
 done
 
 echo $versions
