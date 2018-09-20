@@ -10,6 +10,7 @@
 * Linux
     * Ubuntu / Debian
         1. ```sudo apt-get install build-essential libcurl3-dev libreadline-dev gfortran```
+        2. ```sudo apt-get install liblzma-dev liblzma5 libbz2-1.0 libbz2-dev```
 
 ## Install
 
@@ -25,6 +26,12 @@ When installing R using `asdf install`, you can pass custom configure options wi
 
 * `R_CONFIGURE_OPTIONS` - use only your configure options
 * `R_EXTRA_CONFIGURE_OPTIONS` - append these configure options along with ones that this plugin already uses
+
+## Using RStudio
+
+RStudio requires building R shared library, in order to do that pass an extra configure option to `asdf install`:
+
+```R_EXTRA_CONFIGURE_OPTIONS=--enable-R-shlib asdf install R <version>```
 
 ## Thanks
 
