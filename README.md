@@ -9,7 +9,7 @@
     1. ```brew install gcc xz```
 * Linux
     * Ubuntu / Debian
-        1. ```sudo apt-get install build-essential libcurl3-dev libreadline-dev gfortran```
+        1. ```sudo apt-get install build-essential libcurl3-dev libreadline-dev gfortran xorg-dev libbz2-dev liblzma-dev libpcre2-dev```
 
 ## Install
 
