@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 versions=""
-for major_version in 2 3; do
+for major_version; do
     versions="${versions} $(curl --silent https://mirrors.nics.utk.edu/cran/src/base/R-${major_version}/ | tr '<>' ',,' | awk -F, '/tar.gz/{ print $13 }' | sed -e 's/.tar.gz//g' -e 's/R-//')"
 done
 
