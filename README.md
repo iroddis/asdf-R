@@ -6,10 +6,29 @@
 
 * Mac
     1. [Homebrew](https://brew.sh): used to install the remainder of the dependencies
-    1. ```brew install gcc xz```
+    1. ```brew install --cask xquartz```
+    1. ```brew install gcc xz bzip2 pcre2```
+    1. See the note below
 * Linux
     * Ubuntu / Debian
-        1. ```sudo apt-get install build-essential libcurl3-dev libreadline-dev gfortran```
+        1. ```sudo apt-get install build-essential libcurl3-dev libreadline-dev gfortran libbz2-dev liblzma-dev libpcre3 libpcre3-dev```
+
+### Mac Notes
+
+After installing the other dependencies, you may need to modify your environment a bit in order to pick
+up the dependencies from homebrew.
+
+```
+# Set bzip2 binary and compile paths
+export PATH="/usr/local/opt/bzip2/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/bzip2/include $CPPFLAGS"
+export LDFLAGS="-L/usr/local/opt/bzip2/lib $LDFLAGS"
+
+# Set pcre2 binary and compile paths
+export PATH="/usr/local/opt/pcre2/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/pcre2/include $CPPFLAGS"
+export LDFLAGS="-L/usr/local/opt/pcre2/lib $LDFLAGS"
+```
 
 ## Install
 
