@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
+# Start the list at major version 2
 major=2
+
+# collect all the versions in this
+versions=()
 
 # Act like a do-while loop and iterate though major versions starting a 2 until no minor releases can be found.
 #   And by no minor release found, no lists found on the webpage with no text like '.tar.gz' on it.
 while : ; do
     major_list="$(curl --silent https://mirrors.nics.utk.edu/cran/src/base/R-${major}/ | tr '<>' ',,' | awk -F, '/tar.gz/{ print $13 }' | sed -e 's/.tar.gz//g' -e 's/R-//')"
     [[ $major_list == '' ]] && break
-    echo "$major_list"
+    versions+=($major_list)
     major=$(( $major + 1 ))
 done
+
+echo ${versions[@]}
